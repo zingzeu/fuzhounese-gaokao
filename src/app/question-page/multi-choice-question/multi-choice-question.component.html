@@ -1,0 +1,26 @@
+<div class="question">
+  <div class="prompt" *ngIf="hasAudio">请先听一段录音</div>
+  <app-audio-player *ngIf="hasAudio" [audioSrcs]="audioSrcs"></app-audio-player>
+  <div class="prompt">
+    {{ question!.prompt }}
+  </div>
+</div>
+<div class="choices" *ngIf="!isImageQuestion">
+  <app-choice
+    *ngFor="let c of textChoices; index as i"
+    [caption]="c"
+    [letter]="choiceToLetter[i]"
+    [selected]="selection === i"
+    (click)="onToggleChoice(i)"
+  ></app-choice>
+</div>
+<div class="choices images" *ngIf="isImageQuestion">
+  <app-choice
+    *ngFor="let c of imageChoices; index as i"
+    [caption]="c.caption"
+    [letter]="choiceToLetter[i]"
+    [selected]="selections.has(i)"
+    (click)="onToggleChoice(i)"
+    [imageSrc]="c.imageSrc"
+  ></app-choice>
+</div>

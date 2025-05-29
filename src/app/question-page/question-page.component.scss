@@ -1,0 +1,84 @@
+:host {
+  height: 100%;
+  display: flex;
+}
+
+.container {
+  background-color: white;
+  margin: 5% 5% 0 5%;
+  width: 100%;
+  display: grid;
+  min-height: fit-content;
+}
+
+.main,
+.stamp {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.main {
+  background-image: url(^assets/seal.svg);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-repeat: repeat-y;
+  background-size: 4%;
+  display: grid;
+  padding: 20px 40px 20px 10%;
+  margin-left: 4%;
+  grid-template-rows: auto min-content auto min-content min-content auto min-content auto;
+}
+
+.stamp {
+  width: 40%;
+  justify-self: end;
+  position: relative;
+  bottom: 4%;
+  right: 4%;
+}
+
+.header {
+  text-align: center;
+}
+
+.question-type {
+  width: 40%;
+  margin-bottom: 0.5em;
+}
+
+.question-hint {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+
+.choices {
+  margin-bottom: 1em;
+}
+
+.grow {
+  flex-grow: 1;
+}
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.action-btn,
+.action-btn-2 {
+  margin: 0 0.6em;
+}
+.action-btn {
+  width: 40%;
+}
+
+.action-btn-2 {
+  width: 60%;
+}
+
+.notes {
+  margin-top: 1em;
+  font-weight: 200;
+  font-size: 0.6em;
+}

@@ -1,0 +1,12 @@
+.prompt {
+  margin-top: 0.5em;
+}
+
+.choices.images{
+    display:grid;
+    grid-template-columns: auto auto;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 2em;
+}

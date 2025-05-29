@@ -1,0 +1,128 @@
+:host {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0 0 0;
+  height: 100%;
+}
+
+.logo {
+  padding-top: 20px;
+  width: 40%;
+}
+
+.title-and-separator {
+  margin-top: 20px;
+  width: 60%;
+}
+
+.separator {
+  margin-top: 16px;
+  display: grid;
+}
+
+.separator-img,
+.hukziu {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.hukziu {
+  width: 30%;
+  justify-self: end;
+  position: relative;
+  bottom: 80%;
+  left: 12%;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.instructions {
+  display: grid;
+  width: 100%;
+}
+
+.envelope-bottom,
+.envelope-top,
+.eraser-container,
+.btn-container {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.envelope-bottom {
+  width: 100%;
+  display: block;
+  align-self: end;
+}
+.envelope-top {
+  z-index: 1000;
+  display: block;
+  width: 100%;
+  align-self: end;
+}
+
+.eraser-container {
+  z-index: 1200;
+}
+
+.btn-container {
+  align-self: end;
+  z-index: 1400;
+  align-content: center;
+  text-align: center;
+  padding-bottom: 36%;
+}
+
+.btn-enter {
+  width: 50%;
+}
+
+.eraser {
+  display: block;
+  width: 16vw;
+  margin-left: 72vw;
+  margin-top: 20vw;
+}
+
+.instruction-box {
+  background-color: white;
+  border: 1px solid #c5172b;
+  padding: 8px;
+  width: 60%;
+  margin: 0 auto;
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 2.5vw;
+  .heading {
+    font-size: 1.4em;
+  }
+  .details {
+    color: black;
+    font-size: 1.1em;
+    font-weight: 200;
+    line-height: 2em;
+    ol {
+      padding-inline-start: 1.2em;
+      margin-block-end: 0;
+    }
+  }
+  .notes {
+    font-size: 0.8em;
+    color: #c5172b;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .instruction-box {
+    font-size: 15px;
+  }
+  .eraser {
+    width: 100px;
+    margin-left: 430px;
+    margin-top: 125px;
+  }
+}

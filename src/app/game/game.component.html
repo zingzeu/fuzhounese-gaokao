@@ -1,0 +1,10 @@
+<app-loading-page *ngIf="isLoading" (ready)="onReady()"></app-loading-page>
+<app-landing-page *ngIf="isLanding" (enter)="onEnter()"></app-landing-page>
+<app-prepare-page *ngIf="isPrepare" (start)="onStart()"></app-prepare-page>
+<app-question-page
+  *ngIf="isQuestion && refresh"
+  (submit)="onSubmit()"
+  (prev)="onPrev()"
+  (next)="onNext()"
+  [question]="questionIndex"
+></app-question-page>

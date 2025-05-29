@@ -1,0 +1,47 @@
+<div class="box">
+  <div class="box-inner">
+    <img
+      class="dangan"
+      src="assets/dangan.svg"
+      imgPreSize
+      [height]="150"
+      [width]="59"
+    />
+    <div class="name" *ngIf="name.length > 0">{{ name }}</div>
+    <input
+      class="name"
+      *ngIf="name.length == 0"
+      [(ngModel)]="userProvidedName"
+      (ngModelChange)="onUpdateName()"
+      placeholder="请输入姓名"
+    />
+    <div>准考证号</div>
+    <div class="number-container">
+      <div class="number" *ngFor="let c of id.split('')">{{ c }}</div>
+    </div>
+    <div class="notes">*绝密试卷 请勿外泄</div>
+  </div>
+  <img
+    imgPreSize
+    [height]="168"
+    [width]="112"
+    class="letters"
+    src="assets/letters.png"
+  />
+  <img
+    class="stamp"
+    imgPreSize
+    [height]="150"
+    [width]="150"
+    src="assets/stamp.svg"
+  />
+</div>
+
+<div class="btn-container">
+  <img
+    class="btn-start bouncy"
+    src="assets/btn_start.svg"
+    (click)="onTriggerStart()"
+  />
+  <div class="counter">已有 6666 人参与了这次考试</div>
+</div>

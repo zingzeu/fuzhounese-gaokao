@@ -1,0 +1,83 @@
+<div class="container">
+  <div class="main">
+    <div class="grow"></div>
+    <div class="header">
+      <img
+        imgPreSize
+        [height]="300"
+        [width]="109"
+        class="question-type"
+        *ngIf="isTranslate"
+        src="assets/type_translate.svg"
+      />
+      <img
+        imgPreSize
+        [height]="300"
+        [width]="109"
+        class="question-type"
+        *ngIf="isListening"
+        src="assets/type_listening.svg"
+      />
+      <img
+        imgPreSize
+        [height]="300"
+        [width]="109"
+        class="question-type"
+        *ngIf="isTrueFalse"
+        src="assets/type_truefalse.svg"
+      />
+      <img
+        imgPreSize
+        [height]="300"
+        [width]="109"
+        class="question-type"
+        *ngIf="isMultiChoice"
+        src="assets/type_multichoice.svg"
+      />
+      <img
+        class="question-hint"
+        *ngIf="isListening"
+        src="assets/question_hint.svg"
+      />
+    </div>
+    <div class="grow"></div>
+    <app-multi-choice-question
+      [question]="questionIndex"
+      *ngIf="!isTrueFalse"
+    ></app-multi-choice-question>
+    <app-true-false-question
+      [question]="questionIndex"
+      *ngIf="isTrueFalse"
+    ></app-true-false-question>
+    <div class="notes">本答题卡由真鸟囝独家出题<br />如有雷同，纯属巧合</div>
+    <div class="grow"></div>
+    <div class="actions">
+      <img
+        imgPreSize
+        [height]="300"
+        [width]="108"
+        class="action-btn"
+        src="assets/btn_prev.svg"
+        (click)="onPrev()"
+        *ngIf="!isFirst"
+      />
+      <img
+        imgPreSize
+        [height]="300"
+        [width]="108"
+        class="action-btn"
+        src="assets/btn_next.svg"
+        (click)="onNext()"
+        *ngIf="!isLast"
+      />
+      <img
+        class="action-btn-2"
+        src="assets/btn_submit.svg"
+        (click)="onSubmit()"
+        *ngIf="isLast"
+      />
+    </div>
+    <div class="grow"></div>
+  </div>
+  <img class="stamp" src="assets/stamp_2.svg" />
+</div>

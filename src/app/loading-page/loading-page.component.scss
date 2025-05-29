@@ -1,0 +1,19 @@
+:host {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px 0 0 0;
+  height: 100%;
+  font-weight: 200;
+}
+
+.logo {
+  padding-top: 20px;
+  width: 40%;
+}
+
+.ninja {
+  padding-left: 10%;
+  margin-bottom: 20px;
+}

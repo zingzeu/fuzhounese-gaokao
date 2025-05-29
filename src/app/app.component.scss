@@ -1,0 +1,67 @@
+#container {
+  margin: 0 auto;
+  width: 100vw;
+  height: calc(100vh);
+  background-image: url(^assets/bg-pattern.png);
+  background-repeat: repeat;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+  display: grid;
+}
+
+.outlet,
+.overlay {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.overlay {
+  pointer-events: none;
+  background-image: url(^assets/overlay.webp);
+  background-size: cover;
+  opacity: 0.2;
+  z-index: 2000;
+}
+.bouncy {
+  animation: bouncy 5s infinite linear;
+  position: relative;
+}
+
+@keyframes bouncy {
+  0% {
+    top: 0em;
+  }
+
+  40% {
+    top: 0em;
+  }
+
+  43% {
+    top: -0.9em;
+  }
+
+  46% {
+    top: 0em;
+  }
+
+  48% {
+    top: -0.4em;
+  }
+
+  50% {
+    top: 0em;
+  }
+
+  100% {
+    top: 0em;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #container {
+    width: 600px;
+    margin: 0 auto;
+  }
+}

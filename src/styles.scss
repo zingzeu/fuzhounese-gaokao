@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  color: #c5172b;
+  margin: 0;
+  background-color: #ece1e0;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.question,
+.choices {
+  border-bottom: 4px solid #c5172b;
+  padding: 1em 0;
+}
+
+.question {
+  color: black;
+  font-size: 1.2em;
+  font-weight: 200;
+  padding-bottom: 0.5em;
+}
+
+@media (max-height: 600px) {
+  .question {
+    font-size: 0.8em;
+  }
+  .choices {
+    font-size: 0.8rem;
+  }
+}

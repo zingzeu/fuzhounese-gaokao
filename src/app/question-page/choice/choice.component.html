@@ -1,0 +1,14 @@
+<div class="choice" matRipple *ngIf="!imageSrc">
+  <span class="black-choice" *ngIf="isSelected">[ {{ letter }} ]</span>
+  <span class="white-choice" *ngIf="!isSelected">[ {{ letter }} ]</span>
+  <span>&nbsp;{{ caption }}</span>
+</div>
+
+<div class="choice" matRipple *ngIf="imageSrc">
+  <img [src]="imageSrc" />
+  <div>
+    <span class="black-choice" *ngIf="isSelected">[ {{ letter }} ]</span>
+    <span class="white-choice" *ngIf="!isSelected">[ {{ letter }} ]</span>
+    <span>&nbsp;{{ caption }}</span>
+  </div>
+</div>

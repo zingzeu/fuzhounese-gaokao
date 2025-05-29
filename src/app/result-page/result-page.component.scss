@@ -1,0 +1,32 @@
+.loading {
+  position: fixed;
+  left: 0;
+  right:0;
+  top: 49vh;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.fill,
+canvas {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+canvas {
+  justify-self: center;
+  align-self: center;
+}
+
+:host {
+  display: flex;
+  height: 100%;
+  display: grid;
+}
+
+#share {
+  position: fixed;
+  top: 4vh;
+  right: 3vh;
+  width: 3vh;
+}

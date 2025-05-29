@@ -1,0 +1,27 @@
+.choice {
+  font-size: 1.2em;
+  font-weight: 200;
+  line-height: 2em;
+}
+
+.black-choice,
+.white-choice {
+  display: inline-block;
+  line-height: 1.1em;
+}
+
+.black-choice {
+  background: black;
+  color: black;
+}
+
+img {
+  width: 60%;
+}
+
+@media (max-height: 600px) {
+  .choice {
+    font-size: 0.8em;
+    line-height: 1.4em;
+  }
+}

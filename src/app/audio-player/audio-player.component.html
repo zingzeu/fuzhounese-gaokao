@@ -1,0 +1,28 @@
+<div class="outer">
+  <img id="play" src="assets/icon_play.svg" (click)="onTriggerPlay()" />
+  <svg id="progress" style="height: 0.6rem">
+    <line
+      x1="2%"
+      y1="50%"
+      x2="98%"
+      y2="50%"
+      style="stroke: rgb(234, 234, 234); stroke-width: 4; stroke-linecap: round"
+    ></line>
+    <line
+      x1="2%"
+      y1="50%"
+      [attr.x2]="progress + '%'"
+      y2="50%"
+      style="stroke: rgb(170, 170, 170); stroke-width: 4; stroke-linecap: round"
+    ></line>
+    <circle
+      id="position"
+      [attr.cx]="progress + '%'"
+      cy="50%"
+      r="4px"
+      stroke="rgb(197, 23, 43)"
+      stroke-width="2"
+      fill="rgb(255,255,255)"
+    />
+  </svg>
+</div>

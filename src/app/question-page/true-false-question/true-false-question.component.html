@@ -1,0 +1,15 @@
+<div class="question">{{ question!.prompt }}</div>
+<div class="choices">
+  <app-choice
+    [caption]="'正确'"
+    [letter]="'A'"
+    [selected]="selection === true"
+    (click)="onToggleChoice(true)"
+  ></app-choice>
+  <app-choice
+    [caption]="'错误'"
+    [letter]="'B'"
+    [selected]="selection === false"
+    (click)="onToggleChoice(false)"
+  ></app-choice>
+</div>
