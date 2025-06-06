@@ -4,7 +4,7 @@ This is the source code of a web app that ran as a successful Internet campaign 
 
 ![Screenshots](cover.png)
 
-Try a live demo: https://ztl8702.github.io/fuzhounese-gaokao
+Try a live demo: https://zingzeu.github.io/fuzhounese-gaokao
 
 ## Technical stuff
 
